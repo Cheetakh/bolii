@@ -1,9 +1,9 @@
 <?php
 
-$host = getenv('DB_HOST');
-$user = getenv('DB_USER');
-$pass = getenv('DB_PASS');
-$db   = getenv('DB_NAME');
+$host = getenv("DB_HOST");
+$user = getenv("DB_USER");
+$pass = getenv("DB_PASS");
+$db   = getenv("DB_NAME");
 
 // SSL сертификатын зам - GitHub-д нэмсэн `cacert.pem` файл
 $cert_path = __DIR__ . '/cacert.pem';
