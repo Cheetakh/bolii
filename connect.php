@@ -5,15 +5,10 @@ $db   = getenv("DB_NAME");
 $pass = getenv("DB_PASS");
 $user = getenv("DB_USER");
 
-
-
-// SSL сертификатын зам - GitHub-д нэмсэн `cacert.pem` файл
 $cert_path = __DIR__ . '/cacert.pem';
 
 $mysqli = mysqli_init();
 $mysqli->ssl_set(NULL, NULL, $cert_path, NULL, NULL);
-
-// SSL client-ээр холбогдоно
 $mysqli->real_connect($host, $db, $pass, $user, 3306, NULL, MYSQLI_CLIENT_SSL);
 
 if ($mysqli->connect_errno) {
