@@ -14,7 +14,6 @@ $mysqli->real_connect($host, $db, $pass, $user, 3306, NULL, MYSQLI_CLIENT_SSL);
 if ($mysqli->connect_errno) {
     echo "Холболтын алдаа гарлаа: " . $mysqli->connect_error;
 } else {
-    // Амжилттай холбогдвол $conn хувьсагч болгон дамжуулах
     $conn = $mysqli;
 }
 ?>
